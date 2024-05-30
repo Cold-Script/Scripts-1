@@ -280,7 +280,7 @@ end
 -- people didnt check console so uh yea
 --assert(ReplicatedStorage.GameData.Floor.Value == "Backdoor", "You are not in the backdoor gamemode")
 if not ReplicatedStorage.GameData.Floor.Value == "Backdoor" then
-    notify("You are not in the backdoor gamemode")
+    notify("Bạn join Backdoor để dùng script")
     return
 end
 
@@ -309,43 +309,43 @@ movement_group:AddSlider("speed_boost", {
 })
 
 bypass_group:AddToggle("anti_jumpscare", {
-    Text = "Anti Haste Jumpscare",
+    Text = "Xoá Haste Jumpscare",
     Default = false,
     Tooltip = "Prevents you from from getting jumpscared by the haste"
 })
 
 bypass_group:AddToggle("anti_vacuum", {
-    Text = "Anti Vacuum",
+    Text = "Chặn Vacuum",
     Default = false,
     Tooltip = "Prevents you from from dying to fake doors"
 })
 
 bypass_group:AddToggle("anti_lookman", {
-    Text = "Anti Lookman",
+    Text = "Chặn Lookman",
     Default = false,
     Tooltip = "Prevents you from from dying to lookman"
 })
 
 main_visual_group:AddToggle("haste_clock", {
-    Text = "Haste Clock",
+    Text = "Haste Đồng Hồ",
     Default = false,
     Tooltip = "Enables clock indicating how much time is left in the game",
 })
 
 main_visual_group:AddToggle("fullbright", {
-    Text = "Fullbright",
+    Text = "Không hiệu ứng bóng tối",
     Default = false,
     Tooltip = "enables fullbright",
 })
 
 main_visual_group:AddToggle("notify_entity", {
-    Text = "Notify Entity",
+    Text = "Cảnh báo Blitz,Lookman",
     Default = false,
     Tooltip = "Notifies when entities spawn",
 })
 
 main_visual_group:AddSlider("fov_slider", {
-    Text = "Field of view",
+    Text = "Độ xa màn hình",
     Min = 30,
     Max = 120,
     Default = 70,
@@ -354,40 +354,23 @@ main_visual_group:AddSlider("fov_slider", {
 })
 
 esp_group:AddToggle("objective_esp", {
-    Text = "Objective ESP",
+    Text = "Trực Quang Chìa khoá gạt",
     Default = false,
     Tooltip = "Shows ESP on levers & keys",
 })
 
 esp_group:AddToggle("door_esp", {
-    Text = "Door ESP",
+    Text = "Trực Quang Cửa",
     Default = false,
     Tooltip = "Shows ESP on Doors",
 })
 
-esp_group:AddToggle("wardrobe_esp", {
-    Text = "Wardrobe ESP",
-    Default = false,
-    Tooltip = "Shows ESP on wardrobes",
-})
-
 esp_group:AddToggle("entity_esp", {
-    Text = "Entity ESP",
+    Text = "Trực Quang Thực thể",
     Default = false,
     Tooltip = "Shows ESP on entities",
 })
 
-esp_settings_group:AddToggle("distanceEspToggle", {
-    Text = "Distance ESP",
-    Default = false,
-    Tooltip = "Shows distance from player to object"
-})
-
-esp_settings_group:AddToggle("tracerEspToggle", {
-    Text = "Tracer ESP",
-    Default = false,
-    Tooltip = "Shows a line from the object to the center of the screen"
-})
 
 local haste = ReplicatedStorage.FloorClientStuff.ClientRemote.Haste
 Toggles.anti_jumpscare:OnChanged(function(value)

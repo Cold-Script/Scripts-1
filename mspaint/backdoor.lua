@@ -10,14 +10,14 @@ local maingame = mainui.Initiator.Main_Game
 local camera = workspace.CurrentCamera
 local remote_folder = ReplicatedStorage.RemotesFolder
 
-local repo = 'https://raw.githubusercontent.com/mstudio45/LinoriaLib/main/'
+local repo = 'https://raw.githubusercontent.com/Cold-Script/LinoriaLib/patch-3/'
 
 local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
 local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
 local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
 
 local Window = Library:CreateWindow({
-    Title = "mspaint > Doors (the backdoor) | "..player.DisplayName,
+    Title = "You Hub",
     Center = true,
     AutoShow = true,
     TabPadding = 5.5,
@@ -38,8 +38,8 @@ local temp = {
 }
 
 local notification_msg = {
-    BackdoorLookman = "Lookman spawned, look away!",
-    BackdoorRush = "Blitz has spawned, quick find a hiding spot!"
+    BackdoorLookman = "Lookman xuất hiện đừng nhìn nó!",
+    BackdoorRush = "Blitz xuât hiênh nắp vào tủ nhanh!"
 }
 
 local clock_screengui = Instance.new("ScreenGui") do
@@ -64,8 +64,8 @@ local clock_screengui = Instance.new("ScreenGui") do
     TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
     TextLabel.BorderSizePixel = 0
     TextLabel.Size = UDim2.new(1, 0, 1, 0)
-    TextLabel.Font = Enum.Font.Code
-    TextLabel.Text = "Not started"
+    TextLabel.Font = Enum.Font.Sarpanch
+    TextLabel.Text = "Nó chưa bắt đầu"
     TextLabel.TextColor3 = Library.FontColor
     TextLabel.TextScaled = true
     TextLabel.TextSize = 14
@@ -130,7 +130,7 @@ function ESP(table)
 
     local TextLabel = Create("TextLabel",{
         Text = textOverride,
-        FontFace = Font.new("rbxassetid://11702779517"),
+        Font = Enum.Font.Sarpanch
         TextColor3 = colorOverride,
         TextSize = 15,
 
